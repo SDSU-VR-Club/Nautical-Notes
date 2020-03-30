@@ -21,7 +21,7 @@ public class TestEnemySpawner : MonoBehaviour
     {
         while (true) {
             var spawn=Instantiate(enemyPrefab, transform);
-            spawn.transform.position += spawn.transform.right * Random.Range(0, 5);
+            spawn.transform.position += spawn.transform.right * Random.Range(0, 3);
             yield return new WaitForSeconds(spawnRate);
 
         }
