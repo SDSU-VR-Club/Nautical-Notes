@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     bool vulnerable=false;
+    bool dead;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -19,9 +20,10 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.velocity = transform.forward * speed;
+        if(!dead)
+            rb.velocity = transform.forward * speed;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -32,5 +34,20 @@ public class Enemy : MonoBehaviour
     {
         print("exited zone");
         vulnerable = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Weapon"))
+        {
+            print("strike");
+            dead = true;
+            vulnerable = false;
+            rb.useGravity = true;
+        }
+        else if (collision.collider.CompareTag("Enemy")&&!dead)
+        {
+            Destroy(collision.collider.gameObject);
+            
+        }
     }
 }

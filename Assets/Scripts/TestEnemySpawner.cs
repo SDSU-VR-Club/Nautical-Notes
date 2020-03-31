@@ -6,6 +6,8 @@ public class TestEnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float spawnRate;
+    public Transform[] spawnPositions;
+    public Transform EnemyHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,10 @@ public class TestEnemySpawner : MonoBehaviour
     private IEnumerator spawn()
     {
         while (true) {
-            var spawn=Instantiate(enemyPrefab, transform);
-            spawn.transform.position += spawn.transform.right * Random.Range(0, 3);
+            var spawn=Instantiate(enemyPrefab, EnemyHolder);
+            int plank = Random.RandomRange(0, 3);
+            spawn.transform.position = spawnPositions[plank].position;
+            spawn.transform.forward = spawnPositions[plank].forward;
             yield return new WaitForSeconds(spawnRate);
 
         }
