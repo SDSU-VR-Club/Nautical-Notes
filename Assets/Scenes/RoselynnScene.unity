@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 291760843}
   - component: {fileID: 291760842}
   - component: {fileID: 291760841}
+  - component: {fileID: 291760845}
   m_Layer: 0
   m_Name: Ocean
   m_TagString: Untagged
@@ -172,7 +173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1b44ccd330e7034f8029fa0e233e555, type: 2}
+  - {fileID: 2100000, guid: dde77e9f120490f4ba6cb798cc101293, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -210,11 +211,26 @@ Transform:
   m_GameObject: {fileID: 291760840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.1949, y: -1.9, z: -4.4472}
-  m_LocalScale: {x: 219.18172, y: 219.18172, z: 219.18172}
+  m_LocalScale: {x: 26.515673, y: 26.515673, z: 26.515673}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291760845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291760840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e6ff06ee306ed4397b836b1f5d46ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 0
+  uvAnimationRate: {x: 0.02, y: 0.04}
+  textureName: _MainTex
 --- !u!1001 &1154761430
 PrefabInstance:
   m_ObjectHideFlags: 0
