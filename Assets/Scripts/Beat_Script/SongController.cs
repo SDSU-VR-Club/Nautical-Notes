@@ -12,7 +12,7 @@ public class SongController : MonoBehaviour {
 
 	float[] realTimeSpectrum;
 	SpectralFluxAnalyzer realTimeSpectralFluxAnalyzer;
-	//PlotController realTimePlotController;
+	PlotController realTimePlotController;
 
 	int numChannels;
 	int numTotalSamples;
@@ -20,7 +20,7 @@ public class SongController : MonoBehaviour {
 	float clipLength;
 	float[] multiChannelSamples;
 	SpectralFluxAnalyzer preProcessedSpectralFluxAnalyzer;
-	//PlotController preProcessedPlotController;
+	PlotController preProcessedPlotController;
 
 	AudioSource audioSource;
 
@@ -34,7 +34,7 @@ public class SongController : MonoBehaviour {
 		if (realTimeSamples) {
 			realTimeSpectrum = new float[1024];
 			realTimeSpectralFluxAnalyzer = new SpectralFluxAnalyzer ();
-			//realTimePlotController = GameObject.Find ("RealtimePlot").GetComponent<PlotController> ();
+			realTimePlotController = GameObject.Find ("RealtimePlot").GetComponent<PlotController> ();
 
 			this.sampleRate = AudioSettings.outputSampleRate;
 		}
@@ -42,7 +42,7 @@ public class SongController : MonoBehaviour {
 		// Preprocess entire audio file upfront
 		if (preProcessSamples) {
 			preProcessedSpectralFluxAnalyzer = new SpectralFluxAnalyzer ();
-			//preProcessedPlotController = GameObject.Find ("PreprocessedPlot").GetComponent<PlotController> ();
+			preProcessedPlotController = GameObject.Find ("PreprocessedPlot").GetComponent<PlotController> ();
 
 			// Need all audio samples.  If in stereo, samples will return with left and right channels interweaved
 			// [L,R,L,R,L,R]
@@ -69,13 +69,13 @@ public class SongController : MonoBehaviour {
 		if (realTimeSamples) {
 			audioSource.GetSpectrumData (realTimeSpectrum, 0, FFTWindow.BlackmanHarris);
 			realTimeSpectralFluxAnalyzer.analyzeSpectrum (realTimeSpectrum, audioSource.time);
-			//realTimePlotController.updatePlot (realTimeSpectralFluxAnalyzer.spectralFluxSamples);
+			realTimePlotController.updatePlot (realTimeSpectralFluxAnalyzer.spectralFluxSamples);
 		}
 
 		// Preprocessed
 		if (preProcessSamples) {
 			int indexToPlot = getIndexFromTime (audioSource.time) / 1024;
-			//preProcessedPlotController.updatePlot (preProcessedSpectralFluxAnalyzer.spectralFluxSamples, indexToPlot);
+			preProcessedPlotController.updatePlot (preProcessedSpectralFluxAnalyzer.spectralFluxSamples, indexToPlot);
 		}
 	}
 
