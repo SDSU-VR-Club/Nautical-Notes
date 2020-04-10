@@ -18,7 +18,10 @@ public class GhostBehaviour : MonoBehaviour
     }
     public void AttackAt(Vector3 pos)
     {
-        transform.position = pos;
-        anim.SetTrigger("attack");
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        {
+            transform.position = pos;
+            anim.SetTrigger("attack");
+        }
     }
 }
