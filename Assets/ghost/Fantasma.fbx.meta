@@ -1,35 +1,87 @@
 fileFormatVersion: 2
 guid: 016289d75be09ee4aa97d01e43782837
 ModelImporter:
-  serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      74: -7450007693496284659
-    second: Armature|Action_Atack
-  - first:
-      74: 5356884688394820544
-    second: Armature|Action_Die
-  - first:
-      74: -4137369156837479277
-    second: Armature|Action_Hurt
-  - first:
-      74: 3080997275191827420
-    second: Armature|Action_Idle
-  - first:
-      74: 9213756571597175214
-    second: Armature|Action_Knockdown
-  - first:
-      74: -2516852388475151399
-    second: Armature|Action_Knockdown_Idle
-  - first:
-      74: 3866826229046493495
-    second: Armature|Action_Knockdown_Up
-  - first:
-      74: 5598162888617864054
-    second: Armature|Action_Walk
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.001
+    100006: Bone.002
+    100008: Bone.003
+    100010: Bone.004
+    100012: Bone.005
+    100014: Bone.006
+    100016: Bone.007
+    100018: Bone.007_end
+    100020: Bone.008
+    100022: Bone.008_end
+    100024: Bone.009
+    100026: Bone.009_end
+    100028: Bone.010
+    100030: Bone.010_end
+    100032: Bone.011
+    100034: Bone.011_end
+    100036: Bone.012
+    100038: Bone.012_end
+    100040: Bone.013
+    100042: Bone.013_end
+    100044: Bone.014
+    100046: Bone.014_end
+    100048: Bone.015
+    100050: Bone.015_end
+    100052: Bone.016
+    100054: Bone.016_end
+    100056: Bone.017
+    100058: Bone.017_end
+    100060: //RootNode
+    100062: Icosphere
+    400000: Armature
+    400002: Bone
+    400004: Bone.001
+    400006: Bone.002
+    400008: Bone.003
+    400010: Bone.004
+    400012: Bone.005
+    400014: Bone.006
+    400016: Bone.007
+    400018: Bone.007_end
+    400020: Bone.008
+    400022: Bone.008_end
+    400024: Bone.009
+    400026: Bone.009_end
+    400028: Bone.010
+    400030: Bone.010_end
+    400032: Bone.011
+    400034: Bone.011_end
+    400036: Bone.012
+    400038: Bone.012_end
+    400040: Bone.013
+    400042: Bone.013_end
+    400044: Bone.014
+    400046: Bone.014_end
+    400048: Bone.015
+    400050: Bone.015_end
+    400052: Bone.016
+    400054: Bone.016_end
+    400056: Bone.017
+    400058: Bone.017_end
+    400060: //RootNode
+    400062: Icosphere
+    2100000: Fantasma
+    4300000: Icosphere
+    7400000: Armature|Action_Atack
+    7400002: Armature|Action_Die
+    7400004: Armature|Action_Hurt
+    7400006: Armature|Action_Idle
+    7400008: Armature|Action_Knockdown
+    7400010: Armature|Action_Knockdown_Idle
+    7400012: Armature|Action_Knockdown_Up
+    7400014: Armature|Action_Walk
+    9500000: //RootNode
+    13700000: Icosphere
   externalObjects: {}
   materials:
-    materialImportMode: 1
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -62,7 +114,6 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -70,19 +121,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -91,10 +141,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
+  copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -104,16 +154,13 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
