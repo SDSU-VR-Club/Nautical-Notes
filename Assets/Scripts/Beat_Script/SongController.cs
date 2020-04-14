@@ -32,7 +32,7 @@ public class SongController : MonoBehaviour {
 
 		// Process audio as it plays
 		if (realTimeSamples) {
-			realTimeSpectrum = new float[1024];
+			realTimeSpectrum = new float[4096];
 			realTimeSpectralFluxAnalyzer = new SpectralFluxAnalyzer ();
 			realTimePlotController = GameObject.Find ("RealtimePlot").GetComponent<PlotController> ();
 
@@ -74,7 +74,7 @@ public class SongController : MonoBehaviour {
 
 		// Preprocessed
 		if (preProcessSamples) {
-			int indexToPlot = getIndexFromTime (audioSource.time) / 1024;
+			int indexToPlot = getIndexFromTime (audioSource.time) / 4096;
 			preProcessedPlotController.updatePlot (preProcessedSpectralFluxAnalyzer.spectralFluxSamples, indexToPlot);
 		}
 	}
@@ -111,7 +111,7 @@ public class SongController : MonoBehaviour {
 			Debug.Log (preProcessedSamples.Length);
 
 			// Once we have our audio sample data prepared, we can execute an FFT to return the spectrum data over the time domain
-			int spectrumSampleSize = 1024;
+			int spectrumSampleSize = 4096;
 			int iterations = preProcessedSamples.Length / spectrumSampleSize;
 
 			FFT fft = new FFT ();
@@ -120,7 +120,7 @@ public class SongController : MonoBehaviour {
 			Debug.Log (string.Format("Processing {0} time domain samples for FFT", iterations));
 			double[] sampleChunk = new double[spectrumSampleSize];
 			for (int i = 0; i < iterations; i++) {
-				// Grab the current 1024 chunk of audio sample data
+				// Grab the current 2048 chunk of audio sample data
 				Array.Copy (preProcessedSamples, i * spectrumSampleSize, sampleChunk, 0, spectrumSampleSize);
 
 				// Apply our chosen FFT Window
@@ -133,7 +133,7 @@ public class SongController : MonoBehaviour {
 				double[] scaledFFTSpectrum = DSPLib.DSP.ConvertComplex.ToMagnitude (fftSpectrum);
 				scaledFFTSpectrum = DSP.Math.Multiply (scaledFFTSpectrum, scaleFactor);
 
-				// These 1024 magnitude values correspond (roughly) to a single point in the audio timeline
+				// These 2048 magnitude values correspond (roughly) to a single point in the audio timeline
 				float curSongTime = getTimeFromIndex(i) * spectrumSampleSize;
 
 				// Send our magnitude data off to our Spectral Flux Analyzer to be analyzed for peaks

@@ -229,7 +229,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 80a50c017eb2be142a42a6c52c49a5b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 900888e7cedf85643ae0eb310d675f85, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.134
   m_Pitch: 1
@@ -725,4 +725,3 @@ MonoBehaviour:
   plotPoints:
   - {fileID: 4536838457428552, guid: 8a552ee8d4e985f4eb965c1dbd8cb815, type: 3}
   displayWindowSize: 300
-  point: {fileID: 1700265148678854, guid: 8a552ee8d4e985f4eb965c1dbd8cb815, type: 3}

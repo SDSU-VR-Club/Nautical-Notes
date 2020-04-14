@@ -13,11 +13,11 @@ public class SpectralFluxInfo {
 
 //Real-Time
 public class SpectralFluxAnalyzer {
-	int numSamples = 1024;
+	int numSamples = 4096;
 
 	// Sensitivity multiplier to scale the average threshold.
 	// In this case, if a rectified spectral flux sample is > 1.5 times the average, it is a peak
-	float thresholdMultiplier = 1.5f;
+	float thresholdMultiplier = 2.4f;//Changed threshold multiplier.
 
 	// Number of samples to average in our window
 	int thresholdWindowSize = 50;
