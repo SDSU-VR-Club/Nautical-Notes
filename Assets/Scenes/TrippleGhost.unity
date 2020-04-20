@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37edfed888e2db40926190179453927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2508047658660466433, guid: 9c59569e90f4ae646afe4f82d9bbc8e9,
+  enemyPrefab: {fileID: 2508047658660466433, guid: 0146691fb96a5d344bbb69df3eab37c5,
     type: 3}
   spawnRate: 0.5
   spawnPositions:
@@ -1480,6 +1480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1290490549}
+  swing: {fileID: 0}
 --- !u!95 &1290490549
 Animator:
   serializedVersion: 3
@@ -1901,6 +1902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2031039698}
+  swing: {fileID: 0}
 --- !u!95 &2031039698
 Animator:
   serializedVersion: 3
@@ -2238,6 +2240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2073127227}
+  swing: {fileID: 0}
 --- !u!95 &2073127227
 Animator:
   serializedVersion: 3
