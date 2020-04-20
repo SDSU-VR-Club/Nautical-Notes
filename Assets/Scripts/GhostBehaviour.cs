@@ -18,11 +18,14 @@ public class GhostBehaviour : MonoBehaviour
     {
 
     }
-    public void AttackAt(Vector3 pos)
+    private void OnMouseDown()
+    {
+        AttackAt();
+    }
+    public void AttackAt()
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
         {
-            transform.position = pos;
             anim.SetTrigger("attack");
             audioSource.PlayOneShot(swing, 0.7f);
         }

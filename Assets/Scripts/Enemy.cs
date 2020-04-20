@@ -74,7 +74,8 @@ public class Enemy : MonoBehaviour
             vulnerable = false;
             rb.useGravity = true;
             audioSource.PlayOneShot(dieSkeleton, 0.6f);
-            GetComponentInChildren<Animator>().SetTrigger("Fall1");
+            //GetComponentInChildren<Animator>().SetTrigger("Fall1");
+            GetComponentInChildren<EnemyRagdoller>().die();
         }
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
