@@ -25,7 +25,7 @@ public class GhostSounds : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //swingSource.Play();
-            audioSource.PlayOneShot(swing, 0.6f);
+            audioSource.PlayOneShot(swing, 1.0f);
         }
     }
     void OnColliderEnter (Collision collision)
