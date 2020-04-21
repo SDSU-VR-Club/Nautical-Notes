@@ -27,7 +27,7 @@ public class GhostBehaviour : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
         {
             anim.SetTrigger("attack");
-            audioSource.PlayOneShot(swing, 0.7f);
+            audioSource.PlayOneShot(swing, 0.6f);
         }
     }
 }

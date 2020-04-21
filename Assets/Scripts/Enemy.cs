@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     bool dead;
     Rigidbody rb;
     public AudioClip attackSound;
-    public AudioClip dieSkeleton;
+    //public AudioClip dieSkeleton;
     public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         var anim = GetComponentInChildren<Animator>();
         anim.SetFloat("speedh", 0);
         anim.SetBool("Attack1h1", true);
-        audioSource.PlayOneShot(attackSound, 0.7f);
+        audioSource.PlayOneShot(attackSound, 0.5f);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
             dead = true;
             vulnerable = false;
             rb.useGravity = true;
-            audioSource.PlayOneShot(dieSkeleton, 0.6f);
+            //audioSource.PlayOneShot(dieSkeleton, 0.6f);
             //GetComponentInChildren<Animator>().SetTrigger("Fall1");
             GetComponentInChildren<EnemyRagdoller>().die();
         }
