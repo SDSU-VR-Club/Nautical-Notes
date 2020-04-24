@@ -5,12 +5,12 @@ using UnityEngine;
 public class GhostBehaviour : MonoBehaviour
 {
     public Animator anim;
-    public AudioClip swing;
-    AudioSource audioSource;
+    public AudioClip swingSound;
+    //AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,7 +27,9 @@ public class GhostBehaviour : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
         {
             anim.SetTrigger("attack");
-            audioSource.PlayOneShot(swing, 0.6f);
+            //audioSource.PlayOneShot(swing, 0.6f);
+            SoundManager.instance.RandomizeSfx(swingSound);
+
         }
     }
 }

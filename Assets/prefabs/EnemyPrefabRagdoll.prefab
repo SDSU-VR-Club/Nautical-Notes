@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5003384856985882288}
   - component: {fileID: 2977009640285432640}
   m_Layer: 11
-  m_Name: EnemyPrefab 1
+  m_Name: EnemyPrefabRagdoll
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,9 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  attackSound: {fileID: 8300000, guid: d40d19a9bd2acd24ea0f0fd0d25b1c33, type: 3}
-  dieSkeleton: {fileID: 8300000, guid: ece42b293db0a4c42b9e9618de0049bd, type: 3}
-  audioSource: {fileID: 2977009640285432640}
+  skeleAttackSound: {fileID: 8300000, guid: d75e7a549c4d1ab4ea31e46f8bc4102d, type: 3}
+  skeleDieSound: {fileID: 8300000, guid: 55d3fa616f51b8e4fbaea6c38ec322c0, type: 3}
 --- !u!65 &4642472009964385597
 BoxCollider:
   m_ObjectHideFlags: 0
