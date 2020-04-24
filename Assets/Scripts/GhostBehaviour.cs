@@ -5,23 +5,31 @@ using UnityEngine;
 public class GhostBehaviour : MonoBehaviour
 {
     public Animator anim;
+    public AudioClip swingSound;
+    //AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void AttackAt(Vector3 pos)
+    private void OnMouseDown()
+    {
+        AttackAt();
+    }
+    public void AttackAt()
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
         {
-            transform.position = pos;
             anim.SetTrigger("attack");
+            //audioSource.PlayOneShot(swing, 0.6f);
+            SoundManager.instance.RandomizeSfx(swingSound);
+
         }
     }
 }

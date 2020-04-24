@@ -17,6 +17,5 @@ public class TargetBehaviour : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        FindObjectOfType<GhostBehaviour>().AttackAt(transform.position);
     }
 }
