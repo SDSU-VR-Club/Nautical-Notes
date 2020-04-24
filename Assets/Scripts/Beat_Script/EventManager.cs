@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RhythmTool;
@@ -17,6 +18,8 @@ public class EventManager : MonoBehaviour
     {
         analyzer.Initialized += OnInitialized;
         eventProvider.Register<Beat>(OnBeat);
+        Enemy en = enemyPrefab.GetComponent<Enemy>();
+        en.speed = 5.0f;
     }
 
     // Update is called once per frame
@@ -30,12 +33,17 @@ public class EventManager : MonoBehaviour
         //Start playing the song.
         player.Play();
     }
+
     //OnBeat, call spawner.
     private void OnBeat(Beat beat)
     {
-        var spawn = Instantiate(enemyPrefab, EnemyHolder);
-        int plank = Random.RandomRange(0, 3);
-        spawn.transform.position = spawnPositions[plank].position;
-        spawn.transform.forward = spawnPositions[plank].forward;
+        var rand = new System.Random();
+        if(rand.Next()%2 == 1)
+        {
+            var spawn = Instantiate(enemyPrefab, EnemyHolder);
+            int plank = UnityEngine.Random.RandomRange(0, 3);
+            spawn.transform.position = spawnPositions[plank].position;
+            spawn.transform.forward = spawnPositions[plank].forward;
+        }        
     }
 }
