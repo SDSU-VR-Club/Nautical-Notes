@@ -272,6 +272,7 @@ MonoBehaviour:
   - {fileID: 373356384}
   - {fileID: 884479413}
   EnemyHolder: {fileID: 328795061}
+  Zone: {fileID: 390430344}
 --- !u!4 &379101451
 Transform:
   m_ObjectHideFlags: 0
