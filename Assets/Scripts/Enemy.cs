@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour
         anim.SetFloat("speedh", 0);
         anim.SetBool("Attack1h1", true);
         SoundManager.instance.RandomizeSfx(skeleAttackSound);
+        GameObject.FindObjectOfType<Player>().TakeDamage(25);
     }
     private void OnCollisionEnter(Collision collision)
     {
