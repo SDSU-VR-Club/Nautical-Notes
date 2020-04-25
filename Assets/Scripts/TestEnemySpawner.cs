@@ -11,7 +11,7 @@ public class TestEnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(spawn());
+        //StartCoroutine(spawn());
     }
 
     // Update is called once per frame
