@@ -47,9 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674a56e1d7f76e944a3db63db5ff546c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5.8498216
   skeleAttackSound: {fileID: 8300000, guid: d75e7a549c4d1ab4ea31e46f8bc4102d, type: 3}
   skeleDieSound: {fileID: 8300000, guid: 55d3fa616f51b8e4fbaea6c38ec322c0, type: 3}
+  attackSpeed: 0.75
 --- !u!65 &4642472009964385597
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     Rigidbody rb;
     public AudioClip skeleAttackSound;
     public AudioClip skeleDieSound;
-    
+    public float attackSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +50,14 @@ public class Enemy : MonoBehaviour
         anim.SetFloat("speedh", 0);
         anim.SetBool("Attack1h1", true);
         SoundManager.instance.RandomizeSfx(skeleAttackSound);
-        GameObject.FindObjectOfType<Player>().TakeDamage(25);
+        StartCoroutine(damageDelay());
+    }
+    private IEnumerator damageDelay()
+    {
+        
+        yield return new WaitForSeconds(attackSpeed);
+        if(!dead)
+        FindObjectOfType<Player>().TakeDamage(25);
     }
     private void OnCollisionEnter(Collision collision)
     {

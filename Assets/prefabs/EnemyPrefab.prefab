@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  attackSound: {fileID: 8300000, guid: d40d19a9bd2acd24ea0f0fd0d25b1c33, type: 3}
-  dieSkeleton: {fileID: 8300000, guid: ece42b293db0a4c42b9e9618de0049bd, type: 3}
-  audioSource: {fileID: -7045377732389200009}
+  skeleAttackSound: {fileID: 0}
+  skeleDieSound: {fileID: 0}
+  attackSpeed: 0.5
 --- !u!65 &4642472009964385597
 BoxCollider:
   m_ObjectHideFlags: 0
