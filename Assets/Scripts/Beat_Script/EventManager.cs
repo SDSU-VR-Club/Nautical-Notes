@@ -44,6 +44,9 @@ public class EventManager : MonoBehaviour
     //OnBeat, call spawner.
     private void OnBeat(Beat beat)
     {
+        print("beat");
+        if (Time.time < 1)
+            return;
         // If statement for if the BPM changes
         if ((currentBPM - beat.bpm) >= 1 || (currentBPM - beat.bpm) <= -1 )
         {
