@@ -4,4 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu UI.unity
+    guid: 452693ac469b55c48b176d1fff50d873
+  - enabled: 1
+    path: Assets/Scenes/TrippleGhost.unity
+    guid: 5704055a496f2e847a51f00172dce2b0
+  m_configObjects: {}
