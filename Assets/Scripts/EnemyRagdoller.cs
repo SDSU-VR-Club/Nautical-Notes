@@ -18,6 +18,7 @@ public class EnemyRagdoller : MonoBehaviour
     }
     public void die()
     {
+        FindObjectOfType<Player>().HealDamage(10);
         GetComponent<Animator>().enabled = false;
         foreach(Rigidbody rb in rbs)
         {
