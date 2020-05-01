@@ -1534,6 +1534,21 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1809353311936075368, guid: 4da2737553a05f2488fe2363bcec1087,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809353311936075368, guid: 4da2737553a05f2488fe2363bcec1087,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.28109992
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809353311936075368, guid: 4da2737553a05f2488fe2363bcec1087,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1809353311936075369, guid: 4da2737553a05f2488fe2363bcec1087,
         type: 3}
       propertyPath: m_AnchorMax.x
