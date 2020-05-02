@@ -6,6 +6,8 @@ public class GhostBehaviour : MonoBehaviour
 {
     public Animator anim;
     public AudioClip swingSound;
+    public KeyCode[] keys;
+    
     //AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,12 @@ public class GhostBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        foreach(KeyCode key in keys){
+            if(Input.GetKeyDown(key)){
+                AttackAt();
+                return;
+            }
+        }
     }
     private void OnMouseDown()
     {
@@ -24,12 +31,11 @@ public class GhostBehaviour : MonoBehaviour
     }
     public void AttackAt()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-        {
+        
             anim.SetTrigger("attack");
             //audioSource.PlayOneShot(swing, 0.6f);
             SoundManager.instance.RandomizeSfx(swingSound);
 
-        }
+        
     }
 }
