@@ -224,6 +224,21 @@ PrefabInstance:
       propertyPath: keys.Array.data[1]
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1100796719065703631, guid: c7950a0e381a39a458032703b6f602f8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100796719065703631, guid: c7950a0e381a39a458032703b6f602f8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100796719065703631, guid: c7950a0e381a39a458032703b6f602f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1233195345640509937, guid: c7950a0e381a39a458032703b6f602f8,
         type: 3}
       propertyPath: m_Name
@@ -362,6 +377,11 @@ PrefabInstance:
     - target: {fileID: 65745851080356756, guid: 81eee2803704cfc4f907203e8771e94b,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246382057915094876, guid: 81eee2803704cfc4f907203e8771e94b,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1018,6 +1038,11 @@ PrefabInstance:
     - target: {fileID: 65745851080356756, guid: 81eee2803704cfc4f907203e8771e94b,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246382057915094876, guid: 81eee2803704cfc4f907203e8771e94b,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1913,6 +1938,11 @@ PrefabInstance:
     - target: {fileID: 65745851080356756, guid: 81eee2803704cfc4f907203e8771e94b,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246382057915094876, guid: 81eee2803704cfc4f907203e8771e94b,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
