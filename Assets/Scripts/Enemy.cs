@@ -56,8 +56,10 @@ public class Enemy : MonoBehaviour
     {
         
         yield return new WaitForSeconds(attackSpeed);
-        if(!dead)
-        FindObjectOfType<Player>().TakeDamage(25);
+        if(!dead){
+            FindObjectOfType<Player>().TakeDamage(25);
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
