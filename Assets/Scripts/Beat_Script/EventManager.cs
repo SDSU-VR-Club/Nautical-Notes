@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RhythmTool;
+using UnityEngine.SceneManagement;
 //using Mathf;
 
 public class EventManager : MonoBehaviour
@@ -20,19 +21,26 @@ public class EventManager : MonoBehaviour
     private Enemy en;
 
     float currentBPM = 0.0f;
-
+    public AudioSource song; 
+    float start;
+    
     void Awake()
     {
         analyzer.Initialized += OnInitialized;
         eventProvider.Register<Beat>(OnBeat);
         en = enemyPrefab.GetComponent<Enemy>();
-        
+        start=Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(song.clip.length<Time.time-start){
+            victory();
+        }
+    }
+    void victory(){
+        SceneManager.LoadScene("victory");
     }
 
     private void OnInitialized(RhythmData rhythmData)

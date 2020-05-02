@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrippleGhost.unity
     guid: 5704055a496f2e847a51f00172dce2b0
+  - enabled: 1
+    path: Assets/Scenes/victory.unity
+    guid: b81cb0e712c45674683eecb95865da9a
+  - enabled: 1
+    path: Assets/Scenes/defeat.unity
+    guid: 5422bf3c40678304a8fd2c77d9c2b2a1
   m_configObjects: {}

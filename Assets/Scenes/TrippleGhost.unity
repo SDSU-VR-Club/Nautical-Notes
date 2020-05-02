@@ -1953,6 +1953,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1348954147}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1410393776 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1619500863745416524, guid: b35c25ecc8baf3445947769537039e79,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504980476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1449615690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2089,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2508047658660466433, guid: 0146691fb96a5d344bbb69df3eab37c5,
         type: 3}
+    - target: {fileID: 1619500864682345537, guid: b35c25ecc8baf3445947769537039e79,
+        type: 3}
+      propertyPath: song
+      value: 
+      objectReference: {fileID: 1410393776}
     - target: {fileID: 2925683257516205302, guid: b35c25ecc8baf3445947769537039e79,
         type: 3}
       propertyPath: m_LocalPosition.x
