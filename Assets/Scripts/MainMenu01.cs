@@ -13,9 +13,12 @@ public class MainMenu01 : MonoBehaviour
     public GameObject QuitGameButton;
     public GameObject eventSystem;
     bool creditsOpen;
+    bool htpOpen;
     public GameObject backButtonCredits;
     public GameObject credits;
     public GameObject creditsCanvas;
+    public GameObject HowToPlayCanvas;
+    public GameObject htpBack;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +26,11 @@ public class MainMenu01 : MonoBehaviour
         if(Input.GetButtonDown("Back") && creditsOpen)
         {
             toggleCredits();
+        }
+
+        if(Input.GetButtonDown("Submit") && htpOpen)
+        {
+            toggleHowToPlay();
         }
     }
 
@@ -48,6 +56,27 @@ public class MainMenu01 : MonoBehaviour
             creditsCanvas.SetActive(true);
             eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(backButtonCredits);
             creditsOpen = true;
+        }
+    }
+
+    public void ViewHowToPlay ()
+    {
+        toggleHowToPlay();
+    }
+
+    void toggleHowToPlay()
+    {   if (htpOpen)
+        {
+            HowToPlayCanvas.SetActive(false);
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(HowToPlayButton);
+            htpOpen = false;
+        }
+
+        else
+        {
+            HowToPlayCanvas.SetActive(true);
+            eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(htpBack);
+            htpOpen = true;
         }
     }
     public void QuitGame()
