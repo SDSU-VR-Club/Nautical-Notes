@@ -224,6 +224,30 @@ PrefabInstance:
       propertyPath: keys.Array.data[1]
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound01
+      value: 
+      objectReference: {fileID: 8300000, guid: 25fa96f8a72ae9e43951190daf3d3190, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound02
+      value: 
+      objectReference: {fileID: 8300000, guid: 655dcdde324dcc64d8474b60614afed9, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound03
+      value: 
+      objectReference: {fileID: 8300000, guid: fddcf96f52b9374409b4fec6be560c84, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound04
+      value: 
+      objectReference: {fileID: 8300000, guid: 13a16318ab481674fab702fa4d8fa17c, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound05
+      value: 
+      objectReference: {fileID: 8300000, guid: b39cb55a408391640b1691096a0cbefd, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound06
+      value: 
+      objectReference: {fileID: 8300000, guid: b4ff2307d5146d44caaf7c5bec0b0b52, type: 3}
     - target: {fileID: 1100796719065703631, guid: c7950a0e381a39a458032703b6f602f8,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -1072,6 +1096,30 @@ PrefabInstance:
       propertyPath: keys.Array.data[1]
       value: 276
       objectReference: {fileID: 0}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound01
+      value: 
+      objectReference: {fileID: 8300000, guid: 25fa96f8a72ae9e43951190daf3d3190, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound02
+      value: 
+      objectReference: {fileID: 8300000, guid: 655dcdde324dcc64d8474b60614afed9, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound03
+      value: 
+      objectReference: {fileID: 8300000, guid: fddcf96f52b9374409b4fec6be560c84, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound04
+      value: 
+      objectReference: {fileID: 8300000, guid: 13a16318ab481674fab702fa4d8fa17c, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound05
+      value: 
+      objectReference: {fileID: 8300000, guid: b39cb55a408391640b1691096a0cbefd, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound06
+      value: 
+      objectReference: {fileID: 8300000, guid: b4ff2307d5146d44caaf7c5bec0b0b52, type: 3}
     - target: {fileID: 1233195345640509937, guid: c7950a0e381a39a458032703b6f602f8,
         type: 3}
       propertyPath: m_Name
@@ -1708,6 +1756,30 @@ PrefabInstance:
       propertyPath: keys.Array.data[3]
       value: 119
       objectReference: {fileID: 0}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound01
+      value: 
+      objectReference: {fileID: 8300000, guid: 25fa96f8a72ae9e43951190daf3d3190, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound02
+      value: 
+      objectReference: {fileID: 8300000, guid: 655dcdde324dcc64d8474b60614afed9, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound03
+      value: 
+      objectReference: {fileID: 8300000, guid: fddcf96f52b9374409b4fec6be560c84, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound04
+      value: 
+      objectReference: {fileID: 8300000, guid: 13a16318ab481674fab702fa4d8fa17c, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound05
+      value: 
+      objectReference: {fileID: 8300000, guid: b39cb55a408391640b1691096a0cbefd, type: 3}
+    - target: {fileID: 994718699, guid: c7950a0e381a39a458032703b6f602f8, type: 3}
+      propertyPath: swingSound06
+      value: 
+      objectReference: {fileID: 8300000, guid: b4ff2307d5146d44caaf7c5bec0b0b52, type: 3}
     - target: {fileID: 1233195345640509937, guid: c7950a0e381a39a458032703b6f602f8,
         type: 3}
       propertyPath: m_Name

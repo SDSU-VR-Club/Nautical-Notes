@@ -8,7 +8,10 @@ public class Enemy : MonoBehaviour
     bool vulnerable=false;
     bool dead;
     Rigidbody rb;
-    public AudioClip skeleAttackSound;
+    public AudioClip skeleAttackSound01;
+    public AudioClip skeleAttackSound02;
+    public AudioClip skeleAttackSound03;
+    public AudioClip skeleAttackSound04;
     public AudioClip skeleDieSound;
     public float attackSpeed;
     // Start is called before the first frame update
@@ -49,7 +52,7 @@ public class Enemy : MonoBehaviour
         var anim = GetComponentInChildren<Animator>();
         anim.SetFloat("speedh", 0);
         anim.SetBool("Attack1h1", true);
-        SoundManager.instance.RandomizeSfx(skeleAttackSound);
+        SoundManager.instance.RandomizeSfx(skeleAttackSound01, skeleAttackSound02, skeleAttackSound03, skeleAttackSound04);
         StartCoroutine(damageDelay());
     }
     private IEnumerator damageDelay()
