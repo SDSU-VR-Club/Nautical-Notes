@@ -2126,8 +2126,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Ahoy ghostie!\n\nA mysterious fog is spawning a rival skeleton crew to
     take over yer ship. You and yer ghost mateys must work together to keehaul the
-    skeletons! \n\nBut beware: these skeletons groove to a beat!\n\nInsert instructions
-    here\n"
+    skeletons! \n\nBut beware: these skeletons groove to a beat!\n\n\n\nINSTRUCTIONS\n\n-
+    Control the all three ghosts to hit skeletons on beat\n\n- The player can click
+    on the ghost to attack\n\n- The player can also control the left, right, and
+    middle ghost using the following keyboard inputs: A, S, D keys OR left, down,
+    right arrow keys\n\n- On the planks, there's white lines to indicate the ghosts'
+    hit range\n\n- Skeletons that cross that white line are hittable"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2161,7 +2165,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3506,7 +3510,7 @@ RectTransform:
   m_GameObject: {fileID: 2112015101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.455965, y: 8.490936, z: 4.0883718}
+  m_LocalScale: {x: 7.455965, y: 9.24578, z: 4.0883718}
   m_Children:
   - {fileID: 1972027838}
   - {fileID: 691724308}
