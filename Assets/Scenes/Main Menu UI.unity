@@ -2126,7 +2126,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Ahoy ghostie!\n\nA mysterious fog is spawning a rival skeleton crew to
     take over yer ship. You and yer ghost mateys must work together to keehaul the
-    skeletons! \n\nBut beware: this skeletons groove to a beat!\n\nInsert instructions
+    skeletons! \n\nBut beware: these skeletons groove to a beat!\n\nInsert instructions
     here\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
