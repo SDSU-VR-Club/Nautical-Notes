@@ -62,12 +62,23 @@ public class EventManager : MonoBehaviour
         }
 
         var rand = new System.Random();
-        if(rand.Next()%2 == 1)
+        if(rand.Next()%2 == 0)
         {
             var spawn = Instantiate(enemyPrefab, EnemyHolder);
             int plank = UnityEngine.Random.RandomRange(0, 3);
             spawn.transform.position = spawnPositions[plank].position;
             spawn.transform.forward = spawnPositions[plank].forward;
+        }
+        else if(rand.Next()%2 == 1)
+        {
+            var spawn = Instantiate(enemyPrefab, EnemyHolder);
+            int plank = UnityEngine.Random.RandomRange(0, 3);
+            var spawn2 = Instantiate(enemyPrefab, EnemyHolder);
+            int plank2 = UnityEngine.Random.RandomRange(0, 3);
+            spawn.transform.position = spawnPositions[plank].position;
+            spawn.transform.forward = spawnPositions[plank].forward;
+            spawn2.transform.position = spawnPositions[plank2].position;
+            spawn2.transform.forward = spawnPositions[plank2].forward;
         }
 
         currentBPM = beat.bpm;
