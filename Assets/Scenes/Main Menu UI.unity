@@ -2127,12 +2127,14 @@ MonoBehaviour:
   m_text: "Ahoy ghostie!\n\nA mysterious fog is spawning a rival skeleton crew to
     take over yer ship. You and yer ghost mateys must work together to keehaul the
     skeletons! \n\nBut beware: these skeletons groove to a beat!\n\n\n\nINSTRUCTIONS\n\n-
-    Control the all three ghosts to hit skeletons on beat\n\n- The player can click
-    on the ghost to attack\n\n- The player can also control the left, right, and
-    middle ghost using the following keyboard inputs: A, S, D keys OR left, down,
-    right arrow keys\n\n- On the planks, there's white lines to indicate the ghosts'
-    hit range\n\n- Skeletons that cross that white line are hittable. They'll even
-    turn red!"
+    P key = pause\n\n- Pressing the Esc key at any time allows you to exit the game\n\n-
+    Control the all three ghosts to hit skeletons on beat! But don't get too greedy
+    and mash buttons: you'll lose energy\n\n- Hitting skeletons will restore that
+    energy!\n\n- The player can click on an individual ghost to attack\n\n- The player
+    can also control the left, right, and middle ghost using the following keyboard
+    inputs: A, S, D keys OR left, down, right arrow keys\n\n- On the planks, there's
+    white lines to indicate the ghosts' hit range\n\n- Skeletons that cross that
+    white line are hittable. They'll even turn red!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
