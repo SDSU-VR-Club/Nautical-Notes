@@ -7,6 +7,7 @@ TagManager:
   - Shootable
   - Enemy
   - Weapon
+  - highlight
   layers:
   - Default
   - TransparentFX

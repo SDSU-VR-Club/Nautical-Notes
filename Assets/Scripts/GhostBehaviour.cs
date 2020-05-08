@@ -13,6 +13,7 @@ public class GhostBehaviour : MonoBehaviour
     public AudioClip swingSound06;
     public KeyCode[] keys;
     
+    public Player health;
     //AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class GhostBehaviour : MonoBehaviour
     }
     public void AttackAt()
     {
-        
+            health.TakeDamage(3);
             anim.SetTrigger("attack");
             //audioSource.PlayOneShot(swing, 0.6f);
             SoundManager.instance.RandomizeSfx(swingSound01, swingSound02, swingSound03, swingSound04, swingSound05, swingSound06);

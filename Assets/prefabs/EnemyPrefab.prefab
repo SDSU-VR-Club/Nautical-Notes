@@ -144,9 +144,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  skeleAttackSound: {fileID: 0}
+  skeleAttackSound01: {fileID: 0}
+  skeleAttackSound02: {fileID: 0}
+  skeleAttackSound03: {fileID: 0}
+  skeleAttackSound04: {fileID: 0}
   skeleDieSound: {fileID: 0}
   attackSpeed: 0.5
+  highlight: {fileID: 2100000, guid: e92caaac9cafec6488bc6ad1f271fe20, type: 2}
 --- !u!65 &4642472009964385597
 BoxCollider:
   m_ObjectHideFlags: 0

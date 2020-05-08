@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public AudioClip skeleAttackSound04;
     public AudioClip skeleDieSound;
     public float attackSpeed;
+    public Material highlight;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +38,15 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("highlight")){
+            GetComponentInChildren<SkinnedMeshRenderer>().material=highlight;
+        }
+        else{
         print("entered zone");
         vulnerable = true;
         if (!dead)
             attack();
+        }
     }
     //private void OnTriggerExit(Collider other)
     //{
@@ -52,6 +58,7 @@ public class Enemy : MonoBehaviour
         var anim = GetComponentInChildren<Animator>();
         anim.SetFloat("speedh", 0);
         anim.SetBool("Attack1h1", true);
+        
         SoundManager.instance.RandomizeSfx(skeleAttackSound01, skeleAttackSound02, skeleAttackSound03, skeleAttackSound04);
         StartCoroutine(damageDelay());
     }
@@ -74,6 +81,7 @@ public class Enemy : MonoBehaviour
         {
             StartCoroutine(die());
         }
+        
         else
         {
             
