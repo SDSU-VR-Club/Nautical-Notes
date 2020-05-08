@@ -2131,7 +2131,8 @@ MonoBehaviour:
     on the ghost to attack\n\n- The player can also control the left, right, and
     middle ghost using the following keyboard inputs: A, S, D keys OR left, down,
     right arrow keys\n\n- On the planks, there's white lines to indicate the ghosts'
-    hit range\n\n- Skeletons that cross that white line are hittable"
+    hit range\n\n- Skeletons that cross that white line are hittable. They'll even
+    turn red!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
