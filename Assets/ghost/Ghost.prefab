@@ -305,7 +305,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 289301614986012343, guid: 122c0387f6e6da24eaa8335983f4e8b5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 016289d75be09ee4aa97d01e43782837, type: 3}
   m_Bones:
   - {fileID: 894230897687611958}
   - {fileID: 7880362643208607577}
@@ -507,8 +507,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 994718700}
-  swingSound: {fileID: 8300000, guid: 13a16318ab481674fab702fa4d8fa17c, type: 3}
-  keys: 
+  swingSound01: {fileID: 8300000, guid: 25fa96f8a72ae9e43951190daf3d3190, type: 3}
+  swingSound02: {fileID: 8300000, guid: 655dcdde324dcc64d8474b60614afed9, type: 3}
+  swingSound03: {fileID: 8300000, guid: fddcf96f52b9374409b4fec6be560c84, type: 3}
+  swingSound04: {fileID: 8300000, guid: 13a16318ab481674fab702fa4d8fa17c, type: 3}
+  swingSound05: {fileID: 8300000, guid: b39cb55a408391640b1691096a0cbefd, type: 3}
+  swingSound06: {fileID: 8300000, guid: b4ff2307d5146d44caaf7c5bec0b0b52, type: 3}
+  keys: 1301000064000000
+  health: {fileID: 0}
 --- !u!1 &1504554973986218261
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,14 +776,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3221131307244035695}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6085594166847020271}
   m_Father: {fileID: 894230897687611958}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3645707888170663738
 GameObject:
   m_ObjectHideFlags: 0
