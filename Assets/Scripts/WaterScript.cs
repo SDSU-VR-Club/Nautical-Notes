@@ -8,13 +8,14 @@ public class WaterScript : MonoBehaviour
     public string textureName = "_MainTex";
 
     Vector2 uvOffset = Vector2.zero;
-
+    Renderer renderer;
+    void Start(){
+        renderer=GetComponent<Renderer>();
+    }
     void LateUpdate()
     {
         uvOffset += (uvAnimationRate * Time.deltaTime);
-        if (GetComponent<Renderer>().enabled)
-        {
-            GetComponent<Renderer>().materials[materialIndex].SetTextureOffset(textureName, uvOffset);
-        }
+        renderer.materials[materialIndex].SetTextureOffset(textureName, uvOffset);
+        
     }
 }
