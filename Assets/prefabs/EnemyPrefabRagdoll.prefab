@@ -55,6 +55,11 @@ MonoBehaviour:
   skeleDieSound: {fileID: 8300000, guid: 55d3fa616f51b8e4fbaea6c38ec322c0, type: 3}
   attackSpeed: 0.75
   highlight: {fileID: 2100000, guid: e92caaac9cafec6488bc6ad1f271fe20, type: 2}
+  stock: {fileID: 2100000, guid: 8aeeca0b2c2b19a4db4983b729fec3e2, type: 2}
+  ragdoller: {fileID: 7450891920854835961}
+  renderer: {fileID: 5831462759817320143}
+  body: {fileID: 5861758153735610449}
+  anim: {fileID: 5903599593887428975}
 --- !u!65 &4642472009964385597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1264,7 +1269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d440586079b2b4fae4d1604a38a03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbs: []
+  rbs2:
+  - {fileID: 7450888926061468288}
 --- !u!95 &5903599593887428975
 Animator:
   serializedVersion: 3

@@ -19,12 +19,20 @@ public class EventManagerNoRythm : MonoBehaviour
     public AudioSource song; 
     float start;
     float timeSinceLastBeat;
+    public static List<Enemy> pool;
+    public float poolCount;
     void Awake()
     {
         en = enemyPrefab.GetComponent<Enemy>();
         start=Time.time;
+        pool=new List<Enemy>();
+        for(int i=0;i<poolCount;i++){
+            GameObject game=Instantiate(enemyPrefab, EnemyHolder);
+            game.SetActive(false);
+            pool.Add(game.GetComponent<Enemy>());
+        }
+        song.Play();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -46,16 +54,22 @@ public class EventManagerNoRythm : MonoBehaviour
         var rand = new System.Random();
         if(rand.Next()%2 == 0)
         {
-            var spawn = Instantiate(enemyPrefab, EnemyHolder);
+            var spawn = pool[0].gameObject;
+            spawn.SetActive(true);
+            pool.RemoveAt(0);
             int plank = UnityEngine.Random.RandomRange(0, 3);
             spawn.transform.position = spawnPositions[plank].position;
             spawn.transform.forward = spawnPositions[plank].forward;
         }
         else if(rand.Next()%2 == 1)
         {
-            var spawn = Instantiate(enemyPrefab, EnemyHolder);
+            var spawn = pool[0].gameObject;
+            pool.RemoveAt(0);
+            spawn.SetActive(true);
             int plank = UnityEngine.Random.RandomRange(0, 3);
-            var spawn2 = Instantiate(enemyPrefab, EnemyHolder);
+            var spawn2 = pool[0].gameObject;
+            pool.RemoveAt(0);
+            spawn2.SetActive(true);
             int plank2 = UnityEngine.Random.RandomRange(0, 3);
             spawn.transform.position = spawnPositions[plank].position;
             spawn.transform.forward = spawnPositions[plank].forward;

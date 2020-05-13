@@ -1435,6 +1435,11 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 478478757905802676, guid: b35c8eb989773204bb881c8b81671ae8,
+        type: 3}
+      propertyPath: maxHealth2
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 478478757905802677, guid: b35c8eb989773204bb881c8b81671ae8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2353,6 +2358,7 @@ MonoBehaviour:
   Zone: {fileID: 404964931}
   beatInterval: 0.5
   song: {fileID: 1258337209}
+  poolCount: 25
 --- !u!4 &1847736413
 Transform:
   m_ObjectHideFlags: 0

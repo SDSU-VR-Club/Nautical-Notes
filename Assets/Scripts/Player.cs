@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
 
-    public int maxHealth = 4;
-    public int currentHealth;
+
+    public int maxHealth2;
+    public static int maxHealth;
+    public static int currentHealth;
 
     public HealthBar healthBar;
-
+    public static HealthBar healthBar2;
     // Start is called before the first frame update
     void Start() 
     { 
+        maxHealth=maxHealth2;
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar2=healthBar;
+        healthBar2.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -23,24 +27,25 @@ public class Player : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
+    public static void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        healthBar2.SetHealth(currentHealth);
         if(currentHealth<0)
             defeat();
     }
-    void defeat(){
+    static void defeat(){
         SceneManager.LoadScene("defeat");
     }
-    public void HealDamage(int heal)
+    public static void HealDamage(int heal)
     {
         currentHealth += heal;
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
-            healthBar.SetMaxHealth(maxHealth);
+            healthBar2.SetMaxHealth(maxHealth);
         }
-        healthBar.SetHealth(currentHealth);
+        healthBar2.SetHealth(currentHealth);
+        
     }
 }

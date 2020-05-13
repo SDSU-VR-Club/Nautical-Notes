@@ -15,10 +15,29 @@ public class Enemy : MonoBehaviour
     public AudioClip skeleDieSound;
     public float attackSpeed;
     public Material highlight;
+    public Material stock;
+    public EnemyRagdoller ragdoller;
+    public MeshRenderer renderer;
+    public SkinnedMeshRenderer body;
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+    void OnEnable()
+    {
+        dead=false;
+        if(rb==null)
+            rb = GetComponent<Rigidbody>();
+        rb.velocity=Vector3.zero;
+            rb.angularVelocity=Vector3.zero;
+        rb.useGravity = false;
+        
+            body.material=stock;
+            renderer.material=stock;
+        
     }
     private void OnMouseDown()
     {
@@ -39,7 +58,9 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("highlight")){
-            GetComponentInChildren<SkinnedMeshRenderer>().material=highlight;
+             body.material=highlight;
+            renderer.material=highlight;
+        
         }
         else{
         print("entered zone");
@@ -55,7 +76,6 @@ public class Enemy : MonoBehaviour
     //}
     private void attack()
     {
-        var anim = GetComponentInChildren<Animator>();
         anim.SetFloat("speedh", 0);
         anim.SetBool("Attack1h1", true);
         
@@ -67,8 +87,10 @@ public class Enemy : MonoBehaviour
         
         yield return new WaitForSeconds(attackSpeed);
         if(!dead){
-            FindObjectOfType<Player>().TakeDamage(25);
-            Destroy(gameObject);
+            Player.TakeDamage(25);
+            gameObject.SetActive(false);
+            EventManagerNoRythm.pool.Add(this);
+            dead=true;
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -96,9 +118,12 @@ public class Enemy : MonoBehaviour
             rb.useGravity = true;
             //GetComponentInChildren<Animator>().SetTrigger("Fall1");
             SoundManager.instance.RandomizeSfx(skeleDieSound);
-            GetComponentInChildren<EnemyRagdoller>().die();
+            ragdoller.die();
+        
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
+        EventManagerNoRythm.pool.Add(this);
         }
-        yield return new WaitForSeconds(3);
-        Destroy(gameObject);
+
     }
 }
