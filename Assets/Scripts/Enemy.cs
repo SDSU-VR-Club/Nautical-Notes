@@ -97,11 +97,11 @@ public class Enemy : MonoBehaviour
     {
         if (collision.collider.CompareTag("Weapon"))
         {
-            StartCoroutine(die());            
+            die();     
         }
         else if (collision.collider.CompareTag("Enemy")&&!dead)
         {
-            StartCoroutine(die());
+            die();
         }
         
         else
@@ -109,20 +109,20 @@ public class Enemy : MonoBehaviour
             
         }
     }
-    private IEnumerator die()
+    private void  die()
     {
         if (!dead)
         {
+            Player.HealDamage(10);
             dead = true;
             vulnerable = false;
             rb.useGravity = true;
             //GetComponentInChildren<Animator>().SetTrigger("Fall1");
             SoundManager.instance.RandomizeSfx(skeleDieSound);
-            ragdoller.die();
+            gameObject.SetActive(false);
+            EventManagerNoRythm.pool.Add(this);
         
-        yield return new WaitForSeconds(2);
-        gameObject.SetActive(false);
-        EventManagerNoRythm.pool.Add(this);
+        
         }
 
     }

@@ -37,7 +37,7 @@ public class GhostBehaviour : MonoBehaviour
     }
     public void AttackAt()
     {
-            health.TakeDamage(3);
+            Player.TakeDamage(3);
             anim.SetTrigger("attack");
             //audioSource.PlayOneShot(swing, 0.6f);
             SoundManager.instance.RandomizeSfx(swingSound01, swingSound02, swingSound03, swingSound04, swingSound05, swingSound06);

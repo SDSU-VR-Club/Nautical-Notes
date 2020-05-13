@@ -35,7 +35,7 @@ public class EnemyRagdoller : MonoBehaviour
     
     public  void die()
     {
-        Player.HealDamage(10);
+        
         animator.enabled = false;
         foreach(Rigidbody rb in rbs2)
         {
